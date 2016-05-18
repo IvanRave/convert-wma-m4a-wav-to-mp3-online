@@ -1,0 +1,20 @@
+{
+  "awsRegion": "eu-west-1",
+  "bucketName": "rave-media",
+  "expiresInterval": 120,
+  "contentLengthMaxMB": 5,
+  "port": 3000,
+  "acl": "public-read",
+  "outBase": "outBase/",
+  "out128": "out128/",
+  "preset128": "1351620000001-300040",
+  "out160": "out160/",
+  "preset160": "1351620000001-300030",
+  "out192": "out192/",
+  "preset192": "1351620000001-300020",
+  "out320": "out320/",
+  "preset320": "1351620000001-300010",  
+  "contentTypeStart": "audio/",
+  "pipelineId": "1463476983943-59pnhu",
+  "outputBucketName": "rave-media"
+}

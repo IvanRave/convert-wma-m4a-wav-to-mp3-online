@@ -1,0 +1,17 @@
+{
+  "name": "mp3shka",
+  "version": "0.1.0",
+  "description": "Convert mp3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "direct-upload-s3": "../direct-upload-s3/",
+    "express": "^4.13.4",
+    "media-encoder": "../media-encoder/"
+  }
+}
