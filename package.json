@@ -1,17 +1,25 @@
 {
-  "name": "mp3shka",
-  "version": "0.1.0",
-  "description": "Convert mp3",
+  "name": "convert-wma-m4a-wav-to-mp3-online",
+  "version": "0.2.0",
+  "description": "Convert wma, m4a, wav to mp3 online",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanRave/convert-wma-m4a-wav-to-mp3-online.git"
+  },
+  "author": "IvanRave",
+  "license": "Apache-2.0",
   "dependencies": {
-    "body-parser": "^1.15.1",
-    "direct-upload-s3": "../direct-upload-s3/",
-    "express": "^4.13.4",
-    "media-encoder": "../media-encoder/"
-  }
+    "body-parser": "1.x",
+    "direct-upload-s3": "https://github.com/IvanRave/direct-upload-s3",
+    "express": "4.x",
+    "media-encoder": "https://github.com/IvanRave/media-encoder"
+  },
+  "bugs": {
+    "url": "https://github.com/IvanRave/convert-wma-m4a-wav-to-mp3-online/issues"
+  },
+  "homepage": "http://reyvart.com/convert-wma-m4a-wav-to-mp3-online"
 }
