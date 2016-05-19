@@ -2,6 +2,7 @@
   <head>
     <title>Convert to mp3 free online</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Convert wma, m4a, wav and other audio formats to mp3 (128kbps, 160kbps, 192kbps, 320kbps): free online converter"/>
     <link rel="stylesheet" href="./libs/pure-min.css" />
     <link rel="stylesheet" href="./libs/dropzone.css" />
@@ -10,6 +11,16 @@
       max-width: 320px;
       margin: 8px auto;
       background-color: #fcfcfc;
+      padding: 0 8px;
+      }
+
+      ul{
+      padding:0;
+      margin:0;
+      }
+
+      ul > li {
+      margin: 8px 0;
       }
 
       #converter {
@@ -31,7 +42,7 @@
   <body>
     <h1>MP3 converter</h1>
     <div id="converter">
-        loading converter...
+      loading converter...
     </div>
     <div id="loader">
     </div>
@@ -67,23 +78,43 @@
         </tbody>
       </table>
     </p>
+    <h2>About encoding</h2>
     <p>
       The MPEG-1 standard does not include a precise specification for an MP3 encoder, but does provide example psychoacoustic models, rate loop, and the like in the non-normative part of the original standard.
     </p>
     <p>
-      Implementers of the standard were supposed to devise their own algorithms suitable for removing parts of the information from the audio input. As a result, there are many different MP3 encoders available, each producing files of differing quality.      
+      Implementers of the standard were supposed to devise their own algorithms suitable for <strong>removing parts of the information</strong> from the audio input. As a result, there are many different MP3 encoders available, each producing files of differing quality.
     </p>
     <p>
-      When performing lossy audio encoding, such as creating an MP3 file, there is a trade-off between the amount of space used and the sound quality of the result. Typically, the creator is allowed to set a bit rate, which specifies how many kilobits the file may use per second of audio. The higher the bit rate, the larger the compressed file will be, and, generally, the closer it will sound to the original file.
+      When performing lossy audio encoding, such as creating an MP3 file, there is a trade-off between the amount of space used and the sound quality of the result. Typically, the creator is allowed to set a bit rate, which specifies how many <strong>kilobits</strong> the file may use <strong>per second</strong> of audio. The higher the bit rate, the larger the compressed file will be, and, generally, the closer it will sound to the original file.
     </p>
-    <p>
-      <div>This project is open-sourced</div>
-      <ul>
-        <li>https://github.com/aws/aws-sdk-js</li>
-        <li>https://github.com/IvanRave/direct-upload-s3</li>
-        <li>https://github.com/IvanRave/media-encoder</li>     
-      </ul>
-    </p>
+    <h2>This project is open-sourced</h2>
+    <ul>
+      <li>
+        Upload files directly to a cloud:
+        <a href="https://github.com/IvanRave/direct-upload-s3">
+          github.com/IvanRave/direct-upload-s3
+        </a>
+      </li>
+      <li>
+        Create encoding jobs:
+        <a href="https://github.com/aws/aws-sdk-js">
+          github.com/aws/aws-sdk-js
+        </a>
+      </li>      
+      <li>
+        Simple middleware for media encoding:
+        <a href="https://github.com/IvanRave/media-encoder">
+          github.com/IvanRave/media-encoder
+        </a>
+      </li>
+      <li>
+        This project:
+        <a href="https://github.com/IvanRave/convert-wma-m4a-wav-to-mp3-online">
+          github.com/IvanRave/convert-wma-m4a-wav-to-mp3-online
+        </a>
+      </li>
+    </ul>
     <script src="./libs/fetch.js"></script>
     <script src="./libs/dropzone.js"></script>
     <script src="./pending.js"></script>
