@@ -3,6 +3,8 @@ var app = app || {};
 (function(fetch){
   'use strict';
 
+  var apiHost = 'http://52.51.81.54';
+
   var buildParams = function(obj){
     var reqParams = [];
     for (var key in obj){
@@ -32,7 +34,7 @@ var app = app || {};
       url += '?' + buildParams(params);
     }
     
-    return fetch("/api" + url)
+    return fetch(apiHost + "/api" + url)
       .then(handleFetch);
   };
 
@@ -48,7 +50,7 @@ var app = app || {};
       opts.body = buildParams(params);
     }
     
-    return fetch("/api" + url, opts)
+    return fetch(apiHost + "/api" + url, opts)
       .then(handleFetch);
   };
   
