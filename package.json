@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/IvanRave/convert-wma-m4a-wav-to-mp3-online/issues"
   },
-  "homepage": "http://reyvart.com/convert-wma-m4a-wav-to-mp3-online"
+  "homepage": "http://reyvart.com/convert-wma-m4a-wav-to-mp3-online",
+  "devDependencies": {
+    "gh-pages": "^0.11.0"
+  }
 }
