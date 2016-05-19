@@ -7,7 +7,8 @@ var app = window.app || {};
   pending.style.margin = 16;
   pending.style.textAlign = 'center';
   pending.style.visibility = 'hidden';
-  document.body.appendChild(pending);
+  pending.style.fontSize = '1.2rem';
+  document.getElementById('loader').appendChild(pending);
   
   app.showPending = function(){
     pending.style.visibility = 'visible';
