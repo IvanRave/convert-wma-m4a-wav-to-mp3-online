@@ -2,11 +2,80 @@
   <head>
     <title>Convert to mp3 free online</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="./libs/dropzone.css"/>
+    <meta name="description" content="Convert wma, m4a, wav and other audio formats to mp3 (128kbps, 160kbps, 192kbps, 320kbps): free online converter"/>
+    <link rel="stylesheet" href="./libs/pure-min.css" />
+    <link rel="stylesheet" href="./libs/dropzone.css" />
+    <style>
+      body {
+      max-width: 320px;
+      margin: 8px auto;
+      background-color: #fcfcfc;
+      }
+
+      #converter {
+      height: 200px;
+      text-align: center;
+      }
+
+      #encode-wrap {
+      text-align: center;
+      }
+
+      #encode-wrap button {
+      margin: 8px;
+      padding: 12px;
+      display: inline-block;
+      }
+    </style>
   </head>
   <body>
-    <h1>Online MP3 converter</h1>
+    <h1>MP3 converter</h1>
+    <div id="converter">
+        loading converter...
+    </div>
+    <div id="loader">
+    </div>
+    <div id="encode-wrap">
+    </div>
 
+    <p>
+      <p>Supported formats</p>
+      <table class="pure-table">
+        <thead>
+          <tr>
+            <th>Format</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>wav</td>
+            <td>Waveform Audio File</td>
+          </tr>
+          <tr>
+            <td>wma</td>
+            <td>Windows Media Audio</td>
+          </tr>
+          <tr>
+            <td>m4a</td>
+            <td>MPEG-4 Part 14</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>and other audio formats</td>
+          </tr>
+        </tbody>
+      </table>
+    </p>
+    <p>
+      The MPEG-1 standard does not include a precise specification for an MP3 encoder, but does provide example psychoacoustic models, rate loop, and the like in the non-normative part of the original standard.
+    </p>
+    <p>
+      Implementers of the standard were supposed to devise their own algorithms suitable for removing parts of the information from the audio input. As a result, there are many different MP3 encoders available, each producing files of differing quality.      
+    </p>
+    <p>
+      When performing lossy audio encoding, such as creating an MP3 file, there is a trade-off between the amount of space used and the sound quality of the result. Typically, the creator is allowed to set a bit rate, which specifies how many kilobits the file may use per second of audio. The higher the bit rate, the larger the compressed file will be, and, generally, the closer it will sound to the original file.
+    </p>
     <script src="./libs/fetch.js"></script>
     <script src="./libs/dropzone.js"></script>
     <script src="./pending.js"></script>

@@ -21,13 +21,15 @@ var app = window.app || {};
       frm.appendChild(inp);
     }
 
-    document.body.appendChild(frm);
+    document.getElementById('converter').innerHTML = "";
+    document.getElementById('converter').appendChild(frm);
+    //document.body.appendChild(frm);
 
     var arrKbps = [128, 160, 192, 320];
 
     var generateButton = function(fileBaseName){
-      arrKbps.forEach(function(kbps){     
-        document.body.appendChild(app.createEncodeButton(fileBaseName, kbps));
+      arrKbps.forEach(function(kbps){
+        document.getElementById('encode-wrap').appendChild(app.createEncodeButton(fileBaseName, kbps));
       });
     };
     
@@ -53,15 +55,17 @@ var app = window.app || {};
       });
     };
 
+    var maxFilesize = data.contentLengthMaxMB || 15;
+
     var opts = {
       // default: 1000
       filesizeBase: 1024,
       maxFiles: 1,
       acceptedFiles: (data.contentTypeStart || '') + '*',
-      maxFilesize: data.contentLengthMaxMB || 5,
+      maxFilesize: maxFilesize,
       clickable: true,
       autoProcessQueue: true,
-      dictDefaultMessage: "Select or drop any audio file...",
+      dictDefaultMessage: "Select or drop any audio file (max " + maxFilesize + "MB)...",
       init: handleInit
     };
     
@@ -69,15 +73,12 @@ var app = window.app || {};
 
     console.log('myDropzone', myDropzone);
     
-    var conds = document.createElement('ul');
-    conds.innerHTML = '<li>maxFiles: ' + opts.maxFiles +
-      '<li>acceptedFiles: ' + opts.acceptedFiles +
-      '<li>maxFilesize, MB: ' + opts.maxFilesize;
+    //var conds = document.createElement('table');
+    //conds.innerHTML = '<li>maxFilesize, MB: ' + opts.maxFilesize;
       // '<li>' +
       // '<li>formAction: ' + frm.action +
       // '<li>formMethod: ' + frm.method +
       // '<li>formEnctype: ' + frm.enctype;
-    document.body.appendChild(conds);
   };
 
   app.apiGet('/calc-form-params')

@@ -38,7 +38,9 @@ var app = window.app || {};
     wrap.style.margin = 20;
     wrap.style.textAlign = 'center';
     wrap.appendChild(link);
-    document.body.appendChild(wrap);
+
+    document.getElementById('loader').appendChild(wrap);
+    // document.body.appendChild(wrap);
   };
 
   /**
@@ -55,7 +57,6 @@ var app = window.app || {};
       console.log(jobResult);
       app.hidePending();
       showLink(jobResult);
-      alert("success");
     }
   };
 
@@ -79,9 +80,6 @@ var app = window.app || {};
           btnEncode.disabled = false;
         });
     };
-
-    btnEncode.style.padding = 16;
-    btnEncode.style.margin = 8;
     
     btnEncode.innerText = 'Encode to MP3 ' + kbps + 'kbps';
     return btnEncode;

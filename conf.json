@@ -2,7 +2,7 @@
   "awsRegion": "eu-west-1",
   "bucketName": "rave-media",
   "expiresInterval": 120,
-  "contentLengthMaxMB": 5,
+  "contentLengthMaxMB": 15,
   "port": 3000,
   "acl": "public-read",
   "outBase": "outBase/",

@@ -55,9 +55,17 @@ class RouteEncode{
       next(new Error("kbps is not supported"));
       return;
     }
+
+    // replace extension to mp3
+    var arrPart = fileBaseName.split('.');
+    // do not change if no extension
+    if (arrPart.length > 1){
+      arrPart[arrPart-1] = 'mp3';
+    }
+    var outName = arrPart.join('.');
     
     this.encoder.createJob(conf.outBase + fileBaseName,
-                           outFolder + fileBaseName,
+                           outFolder + outName,
                            presetId,
                            (err, jobResult) => {
                              this.handleJobResult(err, jobResult, next);
